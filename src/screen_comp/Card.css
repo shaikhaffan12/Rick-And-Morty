@@ -1,0 +1,25 @@
+.div_cls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.div_item{
+    flex: 1 0 500px;
+    box-sizing: border-box;
+    
+    
+}
+
+.div_item:hover{
+    transition: 0.3s;
+}
+
+.pagination{
+    background: white;
+    display: inline-flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+}

@@ -1,0 +1,26 @@
+a{
+    cursor: pointer;
+    color: #2F7773;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    background-color: #C3DDDE;
+}
+.anchor{
+    color: #000;
+}
+.anchor:hover{
+    color: #2F7773;
+}
+
+#Navbar-Button-Div{
+    display: contents;
+}
+
+@media screen and (min-width:992px) {
+    #Navbar-Button-Div{
+        display: flex;
+    }
+}
