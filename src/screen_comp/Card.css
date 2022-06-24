@@ -2,15 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+       
 }
 
-.div_item{
-    flex: 1 0 500px;
-    box-sizing: border-box;
-    
-    
-}
 
 .div_item:hover{
     transition: 0.3s;
@@ -23,3 +17,13 @@
     padding: 20px;
     justify-content: center;
 }
+
+/* .filter_border{
+    border: 1px solid black;
+    margin-top: 13px;
+    height: 20rem;
+    width: 50rem;
+    margin-left: 17rem;
+    text-align: center;
+    align-items: center;
+} */

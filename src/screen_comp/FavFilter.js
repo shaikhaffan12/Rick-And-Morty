@@ -24,9 +24,9 @@ export const FavFilter = () => {
           }}
         >
           <MenuItem value={'species=human'}>Human</MenuItem>
-          <MenuItem value={'species=animal'}>Animal</MenuItem>
+          {/* <MenuItem value={'species=animal'}>Animal</MenuItem> */}
           <MenuItem value={'species=alien'}>Alien</MenuItem>
-          <MenuItem value={'species=humanoid'}>Humanoid</MenuItem>
+          {/* <MenuItem value={'species=humanoid'}>Humanoid</MenuItem> */}
           <MenuItem value={'species=unknown'}>Unknown</MenuItem>
         </Select>
       </FormControl>

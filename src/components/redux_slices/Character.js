@@ -52,6 +52,13 @@ const characterSlice = createSlice({
             state.loading = true
         })
         builder.addCase(favCharacter.fulfilled,(state,action)=>{
+            if (state.favcharcter.find(elem => elem.id === action.payload.id)){
+                const index = state.favcharcter.findIndex(elem => elem.id === action.payload.id)
+                state.favcharcter.splice(index, 1)
+                state.numberOfFav -= 1
+                return
+            }
+            
             state.favcharcter.push(action.payload)
             state.loaded = true
             state.numberOfFav += 1

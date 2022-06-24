@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
@@ -11,21 +11,24 @@ import ShareIcon from '@mui/icons-material/Share';
 import { Grid } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.css';
 import './FavCard.css'
-
+// import { SearchItem } from './SearchItem';
+import { favfilter } from './SearchItem';
+import { favCharacter } from '../components/redux_slices/Character';
 
 
 export const FavCard = () => {
+    console.log(favfilter)
     const favcharcter = useSelector(state => state.character.favcharcter)
     const No_of_favcharacter = useSelector(state=>state.character.numberOfFav)
      
     console.log(favcharcter)
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     if(No_of_favcharacter > 0){
         var favCharCards = favcharcter.map(elem => {
             return(
                 <Grid item >
-                    <Card sx={{ maxWidth: 345 }} >
+                    <Card sx={{ maxWidth: 345 }} style={{'borderRadius': '20px', 'background':'#98B4D4'}}>
                         
                         <CardMedia
                             component="img"
@@ -52,7 +55,7 @@ export const FavCard = () => {
                         </CardContent>
                         <CardActions disableSpacing>
                             <IconButton aria-label="add to favorites"  onClick={() => {
-                                // dispatch(favcharacter (elem.url))
+                                dispatch(favCharacter (elem.url))
                                 console.log('extracted', elem.url)
                             }}>
                                 <FavoriteIcon />
@@ -69,8 +72,13 @@ export const FavCard = () => {
             )
         })
     }
+
+  
+
+
   return (
     <div classNameName='div_cls mt-5'>
+        {/* <SearchItem /> */}
         <h5 className='text-center heading'>My Favourite Cards</h5>
             
             <Grid container spacing={2} justifyContent= "center" alignItems="center" sx = {{marginTop : '20px'}} >

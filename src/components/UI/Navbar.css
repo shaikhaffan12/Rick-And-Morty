@@ -6,7 +6,8 @@ a{
     font-family: 'Montserrat', sans-serif;
 }
 nav{
-    background-color: #C3DDDE;
+    /* background-color: #C3DDDE; */
+    margin-bottom: 10px;
 }
 .anchor{
     color: #000;

@@ -20,7 +20,7 @@ export default function PageNumbers() {
   return (
     <>
     <Stack spacing={2}>
-      <Pagination count={pageCount} variant="rounded"  onChange={(e,page)=>{
+      <Pagination count={pageCount} variant="outlined" color="primary"  onChange={(e,page)=>{
         dispatch(filterFunc(`page=${page}`))
         }}/>
     </Stack>

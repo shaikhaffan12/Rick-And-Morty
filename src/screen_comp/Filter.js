@@ -1,6 +1,6 @@
 import { filterFunc } from "../components/redux_slices/filterFunc";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -15,11 +15,14 @@ export const Filter = () => {
     const [status, setStatus] = useState('')
     const [species, setSpecies] = useState('')
     
+
+
     const disptch = useDispatch()
-    if(gender || status || species ){
+    useMemo(() => {if(gender || status || species ){
       console.log(gender)
       disptch(filterFunc(`${gender}&${status}&${species}`))
-    }
+    }})
+    
   
     const styleBox = {
       'width':'100%',

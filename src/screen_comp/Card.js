@@ -42,9 +42,10 @@ export default function Cards() {
             return (
                 
                 <Grid item >
-                    <Card sx={{ maxWidth: 345 }} >
+                    <Card sx={{ maxWidth: 345 }}  style = {{'borderRadius':'20px', 'background': '#92A8D1'}}>
                         
                         <CardMedia
+                            style={{'borderRadius': '100px'}}
                             component="img"
                             height="194"
                             image={elem.image}
@@ -74,9 +75,7 @@ export default function Cards() {
                             }}>
                                 <FavoriteIcon />
                             </IconButton>
-                            <IconButton aria-label="share">
-                                <ShareIcon />
-                            </IconButton>
+                            
                             
                         </CardActions>
                         
@@ -91,9 +90,11 @@ export default function Cards() {
 
     return (
         <div classNameName='div_cls '>
+            <div className='filter_border'>
             <h6 id='fillterHeader'>Filter Your Favourite Character Here</h6>
             <Filter />
-            <Grid container spacing={2} justifyContent= "center" alignItems="center" sx = {{marginTop : '15px'}} style = {{'marginTop' : '15px'}}>
+            </div>
+            <Grid container spacing={5} justifyContent= "center" alignItems="center" sx = {{marginTop : '15px'}} style = {{'marginTop' : '15px'}}>
 
             {multiplCards}
             </Grid>
